@@ -7,21 +7,22 @@
       <div id = "text">
         <p>To keep connected with us please login with your personal info</p>
       </div>
-      <div id = "sign-up">
-        <button @click = "signup">SIGN UP</button>
+      <div id = "sign-in">
+        <button @click = "signin">SIGN IN</button>
       </div>
     </div>
     <div id = "right">
-      <div id = "sign-intext">
-        <h1>Sign In</h1>
+      <div id = "sign-uptext">
+        <h1>Create Account</h1>
       </div>
       <div id = "info">
+        <input v-model = "name" placeholder = "name" required>
         <input v-model = "email" placeholder= "&#9993; Email" required>
         <br>
         <input v-model = "pass" placeholder= "&#128274; Password" type = "password" required>
       </div>
-      <div id = "sign-in">
-        <button @click = "signin">SIGN IN</button>
+      <div id = "sign-up">
+        <button @click = "signup">SIGN UP</button>
       </div>
       <div id = "links">
         <p>Or connect with us on social media</p>
@@ -35,19 +36,20 @@
 
 <script>
 export default {
-  name: 'Login',
+  name: 'Signup',
   data: function () {
     return {
+    name: "",
     email: "",
     pass: ""
     }
   },
   methods: {
-    signup() {
-      console.log("sign up");
-    },
     signin() {
-      console.log("sign in with", this.email, " with pass:", this.pass);
+      console.log("sign in");
+    },
+    signup() {
+      console.log("sign up with", this.name, " mail:", this.email, " with pass:", this.pass);
     }
   }
 }
@@ -126,10 +128,10 @@ export default {
 }
 
 #right input {
-  width: 30vw;
+  width: 75%;
   height: 4vh;
   border-radius: 25px;
-  margin-top: 5vh;
+  margin-top: 1vh;
   text-align: center;
   border: 0;
   background-color: rgb(240, 231, 231);

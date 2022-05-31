@@ -1,14 +1,14 @@
 <template>
-  <LoginPage/>
+  <Loginpage/>
 </template>
 
 <script>
-import LoginPage from './components/LoginPage.vue'
+import Loginpage from './components/LoginPage.vue'
 
 export default {
   name: 'App',
   components: {
-    LoginPage
+    Loginpage
   }
 }
 </script>
@@ -17,7 +17,7 @@ export default {
 #app {
   margin: 0px;
   padding: 0px;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
